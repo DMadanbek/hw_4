@@ -1,6 +1,7 @@
 from modules import calculator
 import random
 
+#def rand_list():
 rand_list = []
 while len(rand_list) < 20:
     i = random.randint(1, 100)
@@ -10,22 +11,24 @@ print(rand_list)
 
 
 class main_calculator():
-    def plus(a,b):
-        print(calculator.plus.add.addition (a,b))
+    def plus(*val1,**val2):
+        print(calculator.plus.add.addition (*val1,**val2))
 
-    def devis(a,b):
-        print(calculator.div.Div.div(a, b))
+    def devis(val1,val2):
+        print(calculator.div.Div.div(val1, val2))
 
-    def multi(a,b):
-        print(calculator.mul.mul.mul(a, b))
+    def multi(val1,val2):
+        print(calculator.mul.mul.mul(val1, val2))
 
-    def sub(a,b):
-        print(calculator.substraction.substract.sub(a, b))
+    def sub(val1,val2):
+        print(calculator.substraction.substract.sub(val1,val2))
 
 a = random.choice(rand_list)
 b = random.choice(rand_list)
+print(int(a))
+print(int(b))
 
-main_calculator.plus(a,b)
+main_calculator.plus(a,b,3,3,3)
 main_calculator.devis(a,b)
 main_calculator.multi(a,b)
 main_calculator.sub(a,b)
