@@ -1,13 +1,12 @@
 from modules import calculator
 import random
 
-def random_list():
-    rand_list = []
-    while len(rand_list) < 20:
-        i = random.randint(1, 100)
-        if i not in rand_list:
-            rand_list.append(i)
-    return rand_list
+rand_list = []
+while len(rand_list) < 20:
+    i = random.randint(1, 100)
+    if i not in rand_list:
+        rand_list.append(i)
+print(rand_list)
 
 
 class main_calculator():
@@ -23,8 +22,8 @@ class main_calculator():
     def sub(a,b):
         print(calculator.substraction.substract.sub(a, b))
 
-a = random.choice(random_list())
-b = random.choice(random_list())
+a = random.choice(rand_list)
+b = random.choice(rand_list)
 
 main_calculator.plus(a,b)
 main_calculator.devis(a,b)
